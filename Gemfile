@@ -14,6 +14,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'bootstrap'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -25,6 +26,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'bcrypt', '~> 3.1.7'
+gem "paperclip", "~> 5.0.0"
+gem 'faker'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -36,6 +40,13 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'launchy'
+  gem 'pry'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'simplecov', :require => false, :group => :test
 end
 
 group :development do
