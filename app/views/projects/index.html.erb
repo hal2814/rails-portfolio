@@ -15,15 +15,19 @@
 
   <tbody>
     <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.date %></td>
-        <td><%= project.description %></td>
-        <td><%= project.image %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="scene">
+      <div data-depth="0.2">
+        <tr>
+          <td><%= project.name %></td>
+          <td><%= project.date %></td>
+          <td><%= project.description %></td>
+          <td><%= image_tag project.image %></td>
+          <td><%= link_to 'Show', project %></td>
+          <td><%= link_to 'Edit', edit_project_path(project) %></td>
+          <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      </div>
+    </div>
     <% end %>
   </tbody>
 </table>
