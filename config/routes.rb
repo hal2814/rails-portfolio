@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root :to => 'projects#index'
-  get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
   get '/signin' => 'sessions#new'

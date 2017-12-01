@@ -8,6 +8,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <% if current_user %>
+    <%= link_to current_user.name, user_path(current_user)%> | <%= link_to "Sign out", '/signout' %>
+  <% else %>
+    <%= link_to "Admin Sign in", '/signin' %>
+  <% end %>
+
   <body>
     <div class="container">
       <%= flash[:alert] %>
