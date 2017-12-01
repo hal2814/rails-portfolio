@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
-  resources :tags
-  resources :projects
+
+  resources :projects do
+    resources :tags
+  end
 end

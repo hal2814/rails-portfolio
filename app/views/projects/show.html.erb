@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <div class="card">
   <div class="card-header">
@@ -9,7 +9,6 @@
   </div>
   <div class="card-body">
     <p>
-      <strong>Date:</strong>
       <%= @project.date %>
     </p>
 
@@ -20,6 +19,12 @@
 
     <%= image_tag @project.image %>
 
+    <h4>Technologies used:</h4>
+    <% @tags.each do |tag| %>
+      <p><%= tag.tag %></p>
+    <% end %>
+
+    <br>
     <%= link_to 'Edit', edit_project_path(@project) %> |
     <%= link_to 'Back', projects_path %>
   </div>
