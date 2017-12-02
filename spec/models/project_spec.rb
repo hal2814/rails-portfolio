@@ -1,5 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe Project, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+require 'rails_helper'
+
+describe Project do
+  it { should have_many :tags}
+  it { should validate_presence_of :name }
+  it { should validate_presence_of :date }
+  it { should validate_presence_of :description }
+  it { should validate_presence_of :image }
 end
