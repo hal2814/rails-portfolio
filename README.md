@@ -1,5 +1,6 @@
 # Portfolio
 
-This application is a portfolio site made with Rails.
+_This application is a portfolio site made with Rails. As an admin you are able to add new projects to the projects list and update or delete them. Projects can have many tags as well.
 
-research parallax.js gem and other parallax methods
+
+![alt text](public/screen.png)
