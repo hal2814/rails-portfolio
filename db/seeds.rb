@@ -23,3 +23,18 @@ project_list.each do |x|
 end
 
 p "Created #{Project.count} projects"
+
+tag_list = [
+  ['Ruby', Project.first.id],
+  ['Sinatra',Project.first.id],
+  ['Angular',Project.first.id+2],
+  ['Firestore',Project.first.id+2],
+  ['Javascript',Project.first.id+1]
+]
+
+tag_list.each do |x|
+  Tag.create!(tag: x[0],
+              project_id: x[1])
+end
+
+p "Created #{Tag.count} tags"
