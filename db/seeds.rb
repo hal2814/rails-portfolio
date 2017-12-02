@@ -14,3 +14,12 @@ project_list = [
   ['Haiku Checker','2017-10-12','The Haiku Checker allows you to make a Haiku poem on three lines then determine if your poem has the correct amount of syllables. If it does not it will tell you which line and how many syllables it has currently.','https://raw.githubusercontent.com/hal2814/haiku-checker/master/img/screen1.png'],
   ['Food delivery Service Manager','2017-11-9','An application that manages a food delivery business and clients','https://raw.githubusercontent.com/hal2814/food-delivery/master/resources/images/HomePage.png']
 ]
+
+project_list.each do |x|
+  Project.create!(name: x[0],
+                  date: x[1],
+                  description: x[2],
+                  image: x[3])
+end
+
+p "Created #{Project.count} projects"
